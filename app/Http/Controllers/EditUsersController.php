@@ -74,7 +74,10 @@ class EditUsersController extends Controller
 
         if ($member->photo) {
             $image_path = public_path().'/img/profile/'.$member->photo; 
-            unlink($image_path);
+            if (file_exists($image_path)) {
+                unlink($image_path);
+            }
+            
         }
         $dateImg = null;
         if ($request->hasFile('photo')) {
