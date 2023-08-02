@@ -68,7 +68,7 @@ class NewUsersController extends Controller
         ]);
     
         // Redirect to 'admin' route with a success message
-        return redirect('newuser')->with('message', 'สร้าง Admin สำเร็จ');
+        return redirect('newuser')->with('message', 'สร้าง user สำเร็จ');
     }
 
     /**

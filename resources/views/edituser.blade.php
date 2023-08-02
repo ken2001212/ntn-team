@@ -8,7 +8,9 @@
 <main>
     <div class="new-users">
         <h2>Costume protocol</h2>
-
+        @if (session('message'))
+        <p style="color:green; font-size: 24px;">{{ session('message') }}</p>
+        @endif
         <div class="user-list">
 
 
@@ -39,12 +41,14 @@
                             <h2>Create An Account</h2>
 
 
-                            <form action="/" method="post">
-
-
+                            <form method="POST" action="{{ route('update-newuser',$user[0]->id) }}"
+                                enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
                                 <div class="avatar-upload">
                                     <div class="avatar-edit">
-                                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" required />
+                                        <input type='file' id="imageUpload" name="photo" accept=".png, .jpg, .jpeg"
+                                            required />
                                         <label for="imageUpload"></label>
                                     </div>
                                     @if($user[0]->photo)
@@ -68,14 +72,15 @@
                                             <b>Name th<span class="req">*</span></b>
                                         </label>
                                         <input type="text" required autocomplete="none"
-                                            value="{{$user[0]->firstName_th}}" />
+                                            value="{{$user[0]->firstName_th}}" name="firstName_th" />
                                     </div>
 
                                     <div class="field-wrap">
                                         <label class="active">
                                             <b>Name Eng<span class="req">*</span></b>
                                         </label>
-                                        <input type="text" autocomplete="none" value="{{$user[0]->firstName_eng}}" />
+                                        <input type="text" autocomplete="none" name="firstName_eng"
+                                            value="{{$user[0]->firstName_eng}}" />
                                     </div>
                                 </div>
 
@@ -88,22 +93,23 @@
 
                                 <div class="field-wrap">
                                     <label class="active">
-                                        <b> Phone Number<span class="req">*</span></b>
+                                        <b>ตำเเหน่ง <span class="req">*</span></b>
                                     </label>
-                                    <input type="text" required autocomplete="none"
-                                        value="{{$user[0]->job_position}}" />
+                                    <input type="text" required autocomplete="none" value="{{$user[0]->job_position}}"
+                                        name="job_position" />
                                 </div>
                                 <div class="field-wrap">
                                     <label class="active">
                                         <b> Address<span class="req"></span></b>
                                     </label>
-                                    <input type="text" autocomplete="none" value="{{$user[0]->computerType}}" />
+                                    <input type="text" autocomplete="none" value="{{$user[0]->computerType}}"
+                                        name="computerType" />
                                 </div>
                                 <div class="field-wrap">
                                     <label>
                                         <b> Enter New Password<span class="req ">*</span></b>
                                     </label>
-                                    <input type="password" required autocomplete="none" />
+                                    <input type="password" name="password" required autocomplete="none" />
                                 </div>
 
                                 <button type="submit" id="signup-submit"
