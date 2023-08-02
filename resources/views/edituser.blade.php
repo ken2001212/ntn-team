@@ -64,44 +64,44 @@
 
                                 <div class="top-row">
                                     <div class="field-wrap">
-                                        <!--   <label>
+                                        <label class="active">
                                             <b>Name th<span class="req">*</span></b>
-                                        </label> -->
+                                        </label>
                                         <input type="text" required autocomplete="none"
                                             value="{{$user[0]->firstName_th}}" />
                                     </div>
 
                                     <div class="field-wrap">
-                                        <!--  <label>
-                                            <b>Last Name<span class="req">*</span></b>
-                                        </label> -->
+                                        <label class="active">
+                                            <b>Name Eng<span class="req">*</span></b>
+                                        </label>
                                         <input type="text" autocomplete="none" value="{{$user[0]->firstName_eng}}" />
                                     </div>
                                 </div>
 
                                 <div class="field-wrap">
-                                    <!--   <label>
+                                    <label class="active">
                                         <b> Email Address<span class="req">*</span></b>
-                                    </label> -->
+                                    </label>
                                     <input type="email" required autocomplete="none" value="{{$user[0]->email}}" />
                                 </div>
 
                                 <div class="field-wrap">
-                                    <!--   <label>
+                                    <label class="active">
                                         <b> Phone Number<span class="req">*</span></b>
-                                    </label> -->
+                                    </label>
                                     <input type="text" required autocomplete="none"
                                         value="{{$user[0]->job_position}}" />
                                 </div>
                                 <div class="field-wrap">
-                                    <!--  <label>
+                                    <label class="active">
                                         <b> Address<span class="req"></span></b>
-                                    </label> -->
+                                    </label>
                                     <input type="text" autocomplete="none" value="{{$user[0]->computerType}}" />
                                 </div>
                                 <div class="field-wrap">
                                     <label>
-                                        <b> Enter New Password<span class="req">*</span></b>
+                                        <b> Enter New Password<span class="req ">*</span></b>
                                     </label>
                                     <input type="password" required autocomplete="none" />
                                 </div>
