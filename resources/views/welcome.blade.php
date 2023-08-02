@@ -35,7 +35,7 @@
 
 <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
+        <!-- Spinner Start asdasd-->
         <div id="spinner"
             class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -47,7 +47,8 @@
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top shadow-sm" style="position: fixed; width: 100%;">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0 sticky-top shadow-sm"
+                style="position: fixed; width: 100%;">
                 <a href="" class="navbar-brand p-0">
                     <h1 class="m-0">NTNTEAM</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
@@ -569,7 +570,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <p class="section-title text-white h5 mb-4" >photo<span></span></p>
+                    <p class="section-title text-white h5 mb-4">photo<span></span></p>
                     <div class="row g-2" style="   width: 250px;height: 200px;">
                         <div class="col-4">
                             <img class="img-fluid" src="img/portfolio-1.jpg" alt="Image">
