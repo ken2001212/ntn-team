@@ -35,7 +35,7 @@
 
 <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start asdasd-->
+        <!-- Spinner Start -->
         <div id="spinner"
             class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -70,7 +70,8 @@
 
 
                 </div>
-                <a href="manage/login.php" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">ระบบบัตรพนักงาน</a>
+                <a href="{{ route('login') }}"
+                    class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">ระบบบัตรพนักงาน</a>
         </div>
         </nav>
 

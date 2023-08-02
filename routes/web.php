@@ -24,5 +24,6 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/newuser', [NewUsersController::class, 'index'])->name('newuser');
+Route::post('/add-newuser', [NewUsersController::class, 'store'])->name('add-newuser');
 Route::get('/sickleave', [SickleaveController::class, 'index'])->name('sickleave');
 Route::get('/edituser', [EditUsersController::class, 'index'])->name('edituser');

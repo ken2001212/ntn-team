@@ -49,10 +49,13 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+       
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+
+           
+            'firstName_eng' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:8'],
         ]);
     }
 
@@ -64,10 +67,38 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
+       
+       /*  $user =  User::create([
+            'firstName_th' => $data['firstName_th'],
+            'firstName_eng' => $data['firstName_eng'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'idCardNumber' => $data['idCardNumber'],
+            'job_position' => $data['job_position'],
+            'computerType' => $data['computerType'],
+            'ownedFor' => $data['ownedFor'],
+            'problemMessage' => $data['problemMessage'],
+            'problemMessage1' => $data['problemMessage1'],
+            'photo' => $data['photo'],
+            
         ]);
+
+        return redirect('admin')->with('message', "สร้าง Admin สำเร็จ" ); */
+       /*  User::create([
+            'firstName_th' => $data['firstName_th'],
+            'firstName_eng' => $data['firstName_eng'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'idCardNumber' => $data['idCardNumber'],
+            'job_position' => $data['job_position'],
+            'computerType' => $data['computerType'],
+            'ownedFor' => $data['ownedFor'],
+            'problemMessage' => $data['problemMessage'],
+            'problemMessage1' => $data['problemMessage1'],
+            'photo' => $data['photo'],
+        ]);
+     */
+        // Redirect to 'admin' route with a success message
+        return redirect('/');
     }
-}
+} 

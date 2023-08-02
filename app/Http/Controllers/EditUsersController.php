@@ -3,15 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use Auth;
 
 class EditUsersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('edituser');
+
+        $user = DB::table('users')
+        ->where('id', Auth::user()->id)
+        ->get();
+     
+        return view('edituser',['user'=>$user]);
     }
 
     /**
