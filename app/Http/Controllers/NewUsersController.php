@@ -61,6 +61,7 @@ class NewUsersController extends Controller
             'idCardNumber' => $request['idCardNumber'],
             'job_position' => $request['job_position'],
             'computerType' => $request['computerType'],
+            'computerType1' => $request['computerType1'],
             'ownedFor' => $request['ownedFor'],
             'problemMessage' => $request['problemMessage'],
             'problemMessage1' => $request['problemMessage1'],

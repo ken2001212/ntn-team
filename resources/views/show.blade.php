@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
     </script>
-    <link href="css/show.css" rel="stylesheet" />
+    <link href="{{URL::asset('/manage/css/show.css')}}" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,6 +55,7 @@
         <li></li>
         <li></li>
     </ul>
+
     <div style="
         display: grid;
         width: 100%;
@@ -101,8 +102,8 @@
                       background-size: cover;
                       box-shadow: 0 6px 12px #aaa;
                     "></div>
-                                <h4 class="card-title">นาย วริศยศ ศรีสง่า</h4>
-                                <h5 class="name1">ตำเเหน่ง: IT SUPPORT</h5>
+                                <h4 class="card-title">นาย {{$user[0]->firstName_th}}</h4>
+                                <h5 class="name1">ตำเเหน่ง: {{$user[0]->job_position}}</h5>
                             </div>
 
                             <div class="card-body" style="
@@ -118,7 +119,7 @@
                                         <a href="tel://0649732217">
                                             <button class="button button-link">
                                                 <i class="fa fa-phone-square" aria-hidden="true"></i>
-                                                064-973-2217
+                                                {{$user[0]->computerType1}}
                                             </button>
                                         </a>
                                     </div>
@@ -133,7 +134,7 @@
                                             <button class="button button-link">
 
 
-                                                <i class="fa-brands fa-line"></i> pumipumipum
+                                                <i class="fa-brands fa-line"></i> {{$user[0]->problemMessage}}
                                             </button></a>
                                     </div>
                                     <div class="col-12">
@@ -141,14 +142,14 @@
                                             <button class="button button-link">
                                                 <!-- <i class="fa-regular fa-envelope-dot"></i> -->
                                                 <i class="fa-solid fa-envelope"></i>
-                                                KenVarisyos@gmail.com
+                                                {{$user[0]->email}}
                                             </button>
                                         </a>
                                     </div>
                                     <div class="col-12">
                                         <a href="https://www.ntnmedicalteam.com/tawan/">
                                             <button class="button button-link">
-                                                <i class="fa-solid fa-globe"></i> www.ntnmedicalteam.com
+                                                <i class="fa-solid fa-globe"></i> {{$user[0]->problemMessage1}}
                                             </button> </a>
                                     </div>
                                     <!-- <div class="col-12 mt-4">

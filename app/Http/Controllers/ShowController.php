@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use Auth;
 
 class ShowController extends Controller
 {
@@ -15,7 +17,11 @@ class ShowController extends Controller
      */
     public function index()
     {
-        //
+        $user = DB::table('users')
+        ->where('id', Auth::user()->id)
+        ->get();
+     
+        return view('show',['user'=>$user]);
     }
 
     /**

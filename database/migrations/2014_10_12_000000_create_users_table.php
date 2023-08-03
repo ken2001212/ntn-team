@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('idCardNumber');
             $table->string('job_position');
             $table->string('computerType');
+            $table->string('computerType1');
             $table->string('ownedFor');
             $table->string('problemMessage');
             $table->string('problemMessage1');

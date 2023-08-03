@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewUsersController;
 use App\Http\Controllers\SickleaveController;
 use App\Http\Controllers\EditUsersController;
+use App\Http\Controllers\ShowController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +29,4 @@ Route::post('/add-newuser', [NewUsersController::class, 'store'])->name('add-new
 Route::get('/sickleave', [SickleaveController::class, 'index'])->name('sickleave');
 Route::get('/edituser', [EditUsersController::class, 'index'])->name('edituser');
 Route::put('/update-newuser/{id}', [EditUsersController::class, 'update'])->name('update-newuser');
+Route::get('/show', [ShowController::class, 'index'])->name('show');

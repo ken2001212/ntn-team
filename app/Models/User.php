@@ -23,6 +23,7 @@ class User extends Authenticatable
         'idCardNumber',
         'job_position',
         'computerType',
+        'computerType1',
         'ownedFor',
         'problemMessage',
         'problemMessage1',
