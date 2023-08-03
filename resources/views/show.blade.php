@@ -96,7 +96,7 @@
                       height: 15em;
                       background-size: cover;
                       background-position: top;
-                      background-image: url(https://scontent.fbkk22-2.fna.fbcdn.net/v/t1.6435-9/75576650_1389625734527158_18077482989125632_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeG_M5I-agFqOF1iRN2iEnrnamEj8Wx-i1FqYSPxbH6LUbpa3yyvXbv1LPvzzZ6QNYEeG7NxVaNtVdp6n7IH-sRr&_nc_ohc=N-l47NRQTbgAX9RxPuv&_nc_ht=scontent.fbkk22-2.fna&oh=00_AfC77Al98N104Jcam-3jkl-TIoxEGhL2EqjtQ67V8KP8tw&oe=64CB63C0);
+                      background-image: url('{{ URL::asset('/img/profile/' . '' . $user[0]->photo) }}');
                       border: 1em solid whitesmoke;
                       border-radius: 50%;
                       background-size: cover;
@@ -116,7 +116,7 @@
                   ">
                                 <div class="rows">
                                     <div class="col-12">
-                                        <a href="tel://0649732217">
+                                        <a href="tel:{{$user[0]->computerType1}}">
                                             <button class="button button-link">
                                                 <i class="fa fa-phone-square" aria-hidden="true"></i>
                                                 {{$user[0]->computerType1}}
@@ -130,7 +130,7 @@
                                             </button></a>
                                     </div>
                                     <div class="col-12">
-                                        <a href="https://line.me/ti/p/t335AT7v2R">
+                                        <a href="{{$user[0]->problemMessage}}">
                                             <button class="button button-link">
 
 
@@ -138,7 +138,7 @@
                                             </button></a>
                                     </div>
                                     <div class="col-12">
-                                        <a href="mailto:kenVarisyos@gmail.com">
+                                        <a href="mailto:{{$user[0]->email}}">
                                             <button class="button button-link">
                                                 <!-- <i class="fa-regular fa-envelope-dot"></i> -->
                                                 <i class="fa-solid fa-envelope"></i>
@@ -147,7 +147,7 @@
                                         </a>
                                     </div>
                                     <div class="col-12">
-                                        <a href="https://www.ntnmedicalteam.com/tawan/">
+                                        <a href="{{$user[0]->problemMessage1}}">
                                             <button class="button button-link">
                                                 <i class="fa-solid fa-globe"></i> {{$user[0]->problemMessage1}}
                                             </button> </a>
