@@ -34,8 +34,7 @@
                     </div>
                     <div>
                         <h5>Username</h5>
-                        <input class="input @error('firstName_eng') is-invalid @enderror" name="firstName_eng"
-                            type="text" />
+                        <input class="input @error('firstName_eng') is-invalid @enderror" name="email" type="email" />
 
                     </div>
 
