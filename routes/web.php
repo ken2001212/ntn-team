@@ -27,6 +27,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/newuser', [NewUsersController::class, 'index'])->name('newuser');
 Route::post('/add-newuser', [NewUsersController::class, 'store'])->name('add-newuser');
 Route::get('/sickleave', [SickleaveController::class, 'index'])->name('sickleave');
+Route::post('/add-sickleave', [SickleaveController::class, 'store'])->name('add-sickleave');
 Route::get('/edituser', [EditUsersController::class, 'index'])->name('edituser');
 Route::put('/update-newuser/{id}', [EditUsersController::class, 'update'])->name('update-newuser');
 Route::get('/show', [ShowController::class, 'index'])->name('show');

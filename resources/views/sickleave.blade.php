@@ -8,11 +8,13 @@
 <main>
     <div class="new-users">
         <h2>Costume protocol</h2>
-
+        @if (session('message'))
+        <p style="color:green; font-size: 24px;">{{ session('message') }}</p>
+        @endif
         <div class="user-list">
 
 
-        <div class=" container wrapper fadeInDown" style="
+            <div class=" container wrapper fadeInDown" style="
     display: flex;
 ">
 
@@ -21,8 +23,8 @@
                 <h2 class="active"> เเจ้งลางาน </h2>
 
 
-                <form action="apiline.php" method="_POST">
-
+                <form method="POST" action="{{ route('add-sickleave') }}" enctype="multipart/form-data">
+                    @csrf
                     <div class="modal_wrapper">
                         <div class="shadow"></div>
                         <div class="success_wrap">
@@ -134,7 +136,7 @@
                     </form> -->
         </div>
     </div>
-    
+
 </main>
 <!-- End of Main Content -->
 
