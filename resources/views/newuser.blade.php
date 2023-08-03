@@ -145,7 +145,7 @@
                             <p class="  ">อัปโหลดรูปภาพ</p>
                             <input x-model="values.photo" name="photo"
                                 class="w-full cr px-3 py-2 border focus:border-blue-400 focus:outline-none hk"
-                                type="file" accept=".png, .jpg, .jpeg" required />
+                                type="file"   />
                         </label>
 
 
